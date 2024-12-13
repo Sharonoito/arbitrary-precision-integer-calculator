@@ -5,11 +5,15 @@ This project implements a custom BigInt class in Python, designed to handle arbi
 ## Introduction
 This implementation focuses on providing an efficient and extensible way to handle arbitrarily large integers, which Python’s native int type can support, but this project focuses on manually handling the digits, as would be necessary in low-level programming. The BigInt class includes features like handling negative numbers, performing long arithmetic operations, and supporting basic operations commonly used in large number calculations.
 ## Features
-### Arbitrary Precision: Can handle integers of arbitrary size limited only by memory.
-### Basic Arithmetic: Supports addition, subtraction, multiplication, division, and modulus operations.
-### Negative Numbers: Handles negative integers and operations involving negative numbers correctly.
-### Comparison: Supports comparing the magnitude of two BigInt objects.
-### String Representation: Converts a BigInt object to a string for easy display.
+Arbitrary Precision: Can handle integers of arbitrary size limited only by memory.
+
+Basic Arithmetic: Supports addition, subtraction, multiplication, division, and modulus operations.
+
+Negative Numbers: Handles negative integers and operations involving negative numbers correctly.
+
+Comparison: Supports comparing the magnitude of two BigInt objects.
+
+String Representation: Converts a BigInt object to a string for easy display.
 
 ### Class Design
 Constructor
@@ -143,8 +147,10 @@ print(quotient_result)  # Output: 0
 modulus_result = num1 % num2
 print(modulus_result)  # Output: 123456789123456789
 
-## Challenges and Design Decisions
+### Challenges and Design Decisions
 
- Handling Large Numbers: The main challenge in implementing this class was managing large integers manually, without relying on built-in libraries like int. The solution was to store the digits as a list and perform arithmetic step-by-step, using techniques such as long multiplication and manual carry/borrow handling.
+Handling Large Numbers: The main challenge in implementing this class was managing large integers manually, without relying on built-in libraries like int. The solution was to store the digits as a list and perform arithmetic step-by-step, using techniques such as long multiplication and manual carry/borrow handling.
+
 Negative Numbers: A key design decision was handling negative numbers in a way that didn’t complicate the operations. The class simplifies this by keeping a boolean flag is_negative to track the sign and using standard methods for handling negative results in arithmetic.
+
 Efficiency Considerations: The performance of operations like addition and multiplication is optimized by reversing the numbers for easier digit manipulation. However, for extremely large numbers, some of the algorithms (like multiplication) could still be improved further with more efficient methods like Karatsuba or Fast Fourier Transform (FFT).
