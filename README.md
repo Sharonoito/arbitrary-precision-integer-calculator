@@ -1,4 +1,4 @@
-# arbitrary-precision-integer-calculator
+# Arbitrary-precision-integer-calculator
 
 This project implements a custom BigInt class in Python, designed to handle arbitrary-precision integers—numbers that exceed the limits of native integer types (such as Python's int). The class supports basic arithmetic operations like addition, subtraction, multiplication, division, and modulus, as well as comparison and string representation.
 
