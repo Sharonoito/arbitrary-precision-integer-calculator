@@ -127,11 +127,11 @@ Large numbers: Testing with numbers that go beyond typical integer ranges.
 Usage
 Example Usage
 
-# Create BigInt objects
+### Create BigInt objects
 num1 = BigInt('123456789123456789')
 num2 = BigInt('987654321987654321')
 
-# Perform arithmetic operations
+#### Perform arithmetic operations
 sum_result = num1 + num2
 print(sum_result)  # Output: 1111111111111111110
 
